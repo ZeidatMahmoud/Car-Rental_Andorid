@@ -16,6 +16,7 @@ public class Splash extends AppCompatActivity {
         /** splash Screen time to show screen
          * can replaced with a service
          */
+
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run() {

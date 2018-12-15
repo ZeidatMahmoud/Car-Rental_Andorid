@@ -23,6 +23,7 @@
         android:layout_marginRight="50dp"
         android:layout_marginLeft="50dp"
         android:hint="Email"
+        android:textColor="@color/white"
         android:background="@drawable/textbordar"
         android:drawableLeft="@drawable/email"
         android:textAlignment="center"
@@ -41,9 +42,11 @@
         android:textSize="@dimen/text_size"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="10dp"
+        android:textColor="@color/white"
         android:hint="Password"
         android:drawableLeft="@drawable/password"
         android:textAlignment="center"
+        android:inputType="textPassword"
         android:textColorHint="@color/white"
         android:id="@+id/loginPassword"/>
     <CheckBox
@@ -71,6 +74,7 @@
             android:layout_marginRight="200dp"
             android:textSize="@dimen/text_size"
             android:layout_centerHorizontal="true"
+            android:textColor="@color/blu"
             android:layout_marginTop="20dp"
             android:text="login" />
 
@@ -80,6 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:textColor="@color/blu"
             android:background="@color/white"
             android:text="Sign Up Now :)" />
     </RelativeLayout>

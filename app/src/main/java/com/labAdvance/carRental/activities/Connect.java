@@ -1,8 +1,10 @@
 package com.labAdvance.carRental.activities;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -33,6 +35,16 @@ public class Connect extends AppCompatActivity {
         connect = (Button) findViewById(R.id.connectButton);
         bar = (ProgressBar)findViewById(R.id.connectProgress);
         bar.setVisibility(View.INVISIBLE);
+        /**
+         * if user is checked to keep log in
+         * then he will not connect to server
+         * he just go to home activity
+         */
+       if(mydb.isUserLoggedIn() ){
+           Intent i = new Intent(Connect.this , Home.class) ;
+           startActivity(i);
+           finish();
+       }
 
 
         /**
@@ -71,6 +83,9 @@ public class Connect extends AppCompatActivity {
                 });
             }
         });
+
+
+
 
     }
 

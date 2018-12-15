@@ -20,6 +20,15 @@
         android:background="@drawable/textbordar"
         android:inputType="textEmailAddress"
         android:layout_marginTop="40dp" />
+    <TextView
+        android:id="@+id/registerErrorEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"
+        android:textSize="10dp"
+        android:textColor="@color/RedForError"/>
 
     <EditText
         android:id="@+id/registerFullName"
@@ -30,9 +39,18 @@
         android:textAlignment="center"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/textbordar"
         android:inputType="text"/>
+    <TextView
+        android:id="@+id/registerErrorFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"
+        android:textSize="10dp"
+        android:textColor="@color/RedForError"/>
 
     <EditText
         android:id="@+id/registerPassword"
@@ -43,9 +61,18 @@
         android:textAlignment="center"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/textbordar"
         android:inputType="textPassword" />
+    <TextView
+        android:id="@+id/registerErrorPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"
+        android:textSize="10dp"
+        android:textColor="@color/RedForError"/>
 
     <EditText
         android:id="@+id/registerConfirmPassword"
@@ -56,9 +83,29 @@
         android:textAlignment="center"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/textbordar"
         android:inputType="textPassword" />
+    <TextView
+        android:id="@+id/registerErrorConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"
+        android:textSize="10dp"
+        android:textColor="@color/RedForError"/>
+
+    <CheckBox
+        android:id="@+id/registerAgree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="60dp"
+        android:textSize="10dp"
+        android:textColor="@color/colorAccent"
+        android:text="I agree to Car Rental terms and conditions "
+        android:buttonTint="@color/colorAccent"/>
 
 
     <Button
@@ -66,7 +113,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/reverse_button_rounded"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="100dp"
         android:layout_marginLeft="100dp"
         android:textColor="@color/white"
