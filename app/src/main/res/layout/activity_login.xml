@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blu"
+    android:layout_height="match_parent"
+    tools:context=".activities.Login">
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/update"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"/>
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:hint="Email"
+        android:background="@drawable/textbordar"
+        android:drawableLeft="@drawable/email"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        android:id="@+id/loginEmail" />
+
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/textbordar"
+        android:textSize="@dimen/text_size"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:hint="Password"
+        android:drawableLeft="@drawable/password"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:id="@+id/loginPassword"/>
+    <CheckBox
+        android:id="@+id/loginCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:textColor="@color/white"
+        android:buttonTint="@color/white"
+        android:text="stay logged in"
+        android:layout_marginRight="50dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:id="@+id/loginbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rounded_bordar"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="200dp"
+            android:textSize="@dimen/text_size"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="login" />
+
+        <Button
+            android:id="@+id/loginRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:text="Sign Up Now :)" />
+    </RelativeLayout>
+
+
+</LinearLayout>
