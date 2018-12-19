@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.RegisterAc"
+    tools:showIn="@layout/activity_register_new">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/registerEmail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_width"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/textbordar"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/registerErrorEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:textColor="@color/RedForError"
+        android:textSize="@dimen/text_size"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"/>
+
+    <EditText
+        android:id="@+id/registerFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_width"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/textbordar"
+        android:hint="First Name"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size" />
+    <TextView
+        android:id="@+id/registerErrorFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:textSize="@dimen/text_size"
+        android:textColor="@color/RedForError"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"/>
+
+    <EditText
+        android:id="@+id/registerLastName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_width"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/textbordar"
+        android:hint="Last Name"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size" />
+    <TextView
+        android:id="@+id/registerErrorLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:textSize="@dimen/text_size"
+        android:textColor="@color/RedForError"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"/>
+    <Spinner
+        android:id="@+id/registerGender"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_width"
+        android:layout_marginRight="30dp"
+        android:textAlignment="center"
+        android:background="@drawable/spinner_style"
+        android:prompt="@string/choose_option"
+        android:entries="@array/gender_array"
+        android:layout_marginLeft="30dp">
+    </Spinner>
+    <TextView
+        android:id="@+id/registerErrorGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:textSize="@dimen/text_size"
+        android:textColor="@color/RedForError"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"/>
+
+
+
+    <EditText
+        android:id="@+id/registerPassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_width"
+        android:textSize="@dimen/text_size"
+        android:hint="Password"
+        android:textAlignment="center"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textbordar"
+        android:inputType="textPassword" />
+    <TextView
+        android:id="@+id/registerErrorPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:textSize="@dimen/text_size"
+        android:textColor="@color/RedForError"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"/>
+
+    <EditText
+        android:id="@+id/registerConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_width"
+        android:hint="Confirm Password"
+        android:textSize="@dimen/text_size"
+        android:textAlignment="center"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textbordar"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/registerErrorConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/RedForError"
+        android:textSize="@dimen/text_size"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"/>
+
+    <Spinner
+        android:id="@+id/registerCountry"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_width"
+        android:layout_marginTop="10dp"
+        android:entries="@array/countries"
+        android:textAlignment="center"
+        android:background="@drawable/spinner_style"
+        android:prompt="@string/choose_country"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"></Spinner>
+
+    <TextView
+        android:id="@+id/registerErrorCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/RedForError"
+        android:textSize="@dimen/text_size"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"/>
+
+    <Spinner
+        android:id="@+id/registerCity"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_width"
+        android:background="@drawable/spinner_style"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"></Spinner>
+
+    <TextView
+        android:id="@+id/registerErrorCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/RedForError"
+        android:textSize="@dimen/text_size"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
+        <TextView
+            android:id="@+id/registerPhoneCountry"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="+970"/>
+        <EditText
+            android:id="@+id/registerPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:textSize="@dimen/text_size"
+            android:textAlignment="center"
+            android:inputType="textPassword" />
+
+
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/registerErrorPhonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/RedForError"
+        android:textSize="@dimen/text_size"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"/>
+
+    <CheckBox
+        android:id="@+id/registerAgree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="60dp"
+        android:textSize="10dp"
+        android:textColor="@color/colorAccent"
+        android:text="I agree to Car Rental terms and conditions "
+        android:buttonTint="@color/colorAccent"/>
+
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reverse_button_rounded"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/white"
+        android:text="Register" />
+
+</LinearLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>

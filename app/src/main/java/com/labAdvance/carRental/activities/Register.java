@@ -27,11 +27,11 @@ import java.util.regex.Pattern;
 
 public class Register extends AppCompatActivity {
     private EditText email , fullname , password ,confirm ;
-    private TextView errorEmail , errorfullName, errorPassword , errorConfirm ;
+    //private TextView errorEmail , errorfullName, errorPassword , errorConfirm ;
     private Button register ,login ;
     private SqliteHelper mydb ;
     private boolean checkEmail ;
-    private CheckBox agree ;
+    //private CheckBox agree ;
     private int checkPassword ;
 
     @Override
@@ -39,16 +39,15 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
          email  = (EditText)findViewById(R.id.registerEmail);
-         fullname  = (EditText)findViewById(R.id.registerFullName);
+         fullname  = (EditText)findViewById(R.id.registerFirstName);
          password  =(EditText)findViewById(R.id.registerPassword);
          confirm = (EditText)findViewById(R.id.registerConfirmPassword) ;
          register = (Button) findViewById(R.id.registerButton) ;
-         errorEmail  = (TextView)findViewById(R.id.registerErrorEmail);
-         errorfullName  =(TextView)findViewById(R.id.registerErrorFullName);
-        errorPassword  =(TextView)findViewById(R.id.registerErrorPassword);
-        errorConfirm  =(TextView)findViewById(R.id.registerErrorConfirm);
-        login = (Button)findViewById(R.id.registerLogin) ;
-        agree = (CheckBox)findViewById(R.id.registerAgree) ;
+//         errorEmail  = (TextView)findViewById(R.id.registerErrorEmail);
+//         errorfullName  =(TextView)findViewById(R.id.registerErrorFullName);
+//        errorPassword  =(TextView)findViewById(R.id.registerErrorPassword);
+//        errorConfirm  =(TextView)findViewById(R.id.registerErrorConfirm);
+       // agree = (CheckBox)findViewById(R.id.registerAgree) ;
 
 
         mydb = new SqliteHelper(this) ;
@@ -65,13 +64,13 @@ public class Register extends AppCompatActivity {
                  //check email address
                  if(!isEmailValid(email.getText().toString())){
                      changeBordarAndIcon(errorBorder ,errorIcon ,email);
-                     setErrorViews(errorEmail ,"This Email is NOT valid ");
+                    // setErrorViews(errorEmail ,"This Email is NOT valid ");
                      return;
 
                  }
                  if(!isNameValid(fullname.getText().toString())){
                      changeBordarAndIcon(errorBorder,errorIcon, fullname);
-                     setErrorViews(errorfullName ,"Name is invalid ");
+                    // setErrorViews(errorfullName ,"Name is invalid ");
                      return;
                  }
                  //check if password Validity
@@ -82,20 +81,20 @@ public class Register extends AppCompatActivity {
                      case 1:
                          changeBordarAndIcon(errorBorder,errorIcon, password);
                          changeBordarAndIcon(errorBorder,errorIcon, confirm);
-                         setErrorViews(errorPassword ,"Password length must be more than 6 characters ");
-                         setErrorViews(errorConfirm ,"Password length must be more than 6 characters ");
+                        //setErrorViews(errorPassword ,"Password length must be more than 6 characters ");
+                         //setErrorViews(errorConfirm ,"Password length must be more than 6 characters ");
                          return;
                      case 2:
                          changeBordarAndIcon(errorBorder,errorIcon, password);
                          changeBordarAndIcon(errorBorder,errorIcon, confirm);
-                         setErrorViews(errorPassword ,"you should not use your name as password ");
-                         setErrorViews(errorConfirm ,"you should not use your name as password ");
+                         //setErrorViews(errorPassword ,"you should not use your name as password ");
+                         //setErrorViews(errorConfirm ,"you should not use your name as password ");
                          return;
                      case 3:
                          changeBordarAndIcon(errorBorder,errorIcon, password);
                          changeBordarAndIcon(errorBorder,errorIcon, confirm);
-                         setErrorViews(errorPassword ,"Passwords do not match ");
-                         setErrorViews(errorConfirm ,"Passwords do not match ");
+                        // setErrorViews(errorPassword ,"Passwords do not match ");
+                         //setErrorViews(errorConfirm ,"Passwords do not match ");
                          return;
                          default:
                              break;
@@ -103,7 +102,7 @@ public class Register extends AppCompatActivity {
                  checkEmail = mydb.checkExistingEmail(email.getText().toString());
                  if(checkEmail){
                      changeBordarAndIcon(errorBorder,errorIcon ,email);
-                     setErrorViews(errorEmail , "Email is Used");
+                     //setErrorViews(errorEmail , "Email is Used");
                      return;
                  }
 
@@ -111,18 +110,18 @@ public class Register extends AppCompatActivity {
                  changeBordarAndIcon(trueBordar ,trueIcon ,password);
                  changeBordarAndIcon(trueBordar ,trueIcon ,confirm);
                  changeBordarAndIcon(trueBordar ,trueIcon ,fullname);
-                 agree.setCompoundDrawablesWithIntrinsicBounds(null,null,trueIcon ,null);
-                 errorEmail.setText("");
-                 errorPassword.setText("");
-                 errorConfirm.setText("");
-                 errorfullName.setText("");
+                 //agree.setCompoundDrawablesWithIntrinsicBounds(null,null,trueIcon ,null);
+                // errorEmail.setText("");
+                // errorPassword.setText("");
+                 //errorConfirm.setText("");
+                 //errorfullName.setText("");
 
-                 if(!agree.isChecked()){
-                     //agree.setTextColor(getResources().getColor(R.color.RedForError));
-                     agree.setCompoundDrawablesWithIntrinsicBounds(null,null,errorIcon,null);
-                     Toast.makeText(Register.this, "Please Accept the Privacy and terms of Conditions", Toast.LENGTH_SHORT).show();
-                     return;
-                 }
+//                 if(!agree.isChecked()){
+//                     //agree.setTextColor(getResources().getColor(R.color.RedForError));
+//                     agree.setCompoundDrawablesWithIntrinsicBounds(null,null,errorIcon,null);
+//                     Toast.makeText(Register.this, "Please Accept the Privacy and terms of Conditions", Toast.LENGTH_SHORT).show();
+//                     return;
+//                 }
 
                  RegisterModel registerModel = new RegisterModel(email.getText().toString()
                          , fullname.getText().toString()
@@ -136,20 +135,15 @@ public class Register extends AppCompatActivity {
                  //initialize Login
                  mydb.insertLoginData(loginUser);
 
-
-                 Toast.makeText(Register.this, "Registered Successfully ,hit Login Button to Log in:) " , Toast.LENGTH_LONG).show();
-
-             }
-         });
-
-         login.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
                  Intent intent = new Intent(Register.this, Login.class) ;
                  startActivity(intent);
                  finish();
+                 //Toast.makeText(Register.this, "Registered Successfully ,hit Login Button to Log in:) " , Toast.LENGTH_LONG).show();
+
              }
          });
+
+
     }
 
     /**
@@ -197,6 +191,7 @@ public class Register extends AppCompatActivity {
      * @param confirm
      * @return int
      */
+
     public int isPasswordValid(String passwordText, String name , String confirm){
         if(passwordText.length() < 5)
             return 1 ;
