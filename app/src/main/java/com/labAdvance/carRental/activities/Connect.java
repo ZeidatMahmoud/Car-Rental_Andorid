@@ -65,6 +65,7 @@ public class Connect extends AppCompatActivity {
                 call.enqueue(new Callback<List<Car>>() {
                     @Override
                     public void onResponse(Call<List<Car>> call, Response<List<Car>> response) {
+                        mydb.deleteAllCars();
                         for(Car car :response.body()){
                             mydb.insertCarData(car);
                         }

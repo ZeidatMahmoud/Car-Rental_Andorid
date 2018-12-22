@@ -208,7 +208,7 @@
             android:hint="Phone Number"
             android:textSize="@dimen/text_size"
             android:textAlignment="center"
-            android:inputType="textPassword" />
+            android:inputType="phone" />
 
 
 

@@ -2,8 +2,12 @@ package com.labAdvance.carRental.models;
 
 public class RegisterModel {
     private String email ,firstName,lastName , password , gender , country , city , phone ;
+    private byte[] profile ;
 
-    public RegisterModel(String email, String firstName, String lastName, String password, String gender, String country, String city, String phone) {
+    public RegisterModel() {
+    }
+
+    public RegisterModel(String email, String firstName, String lastName, String password, String gender, String country, String city, String phone , byte[] profile) {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -12,8 +16,16 @@ public class RegisterModel {
         this.country = country;
         this.city = city;
         this.phone = phone;
+        this.profile =profile ;
     }
 
+    public byte[] getProfile() {
+        return profile;
+    }
+
+    public void setProfile(byte[] profile) {
+        this.profile = profile;
+    }
 
     public String getEmail() {
         return email;

@@ -10,6 +10,11 @@ public class LoginUser {
     private String email, password;
     private boolean stayLogged;
 
+    public LoginUser(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
     public LoginUser(String email, String password, boolean stayLogged) {
         this.email = email;
         this.password = password;
